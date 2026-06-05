@@ -11,7 +11,7 @@ export default function About() {
   return (
     <section id="about" className="py-24 bg-cream-50 dark:bg-maroon-900 border-y border-cream-200 dark:border-maroon-900 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-6">
-        
+
         {/* Section Header */}
         <div className="mb-16">
           <p className="text-xs font-mono uppercase tracking-widest text-maroon-500 dark:text-cream-400 mb-2">01 / Profile</p>
@@ -21,7 +21,7 @@ export default function About() {
 
         {/* Two-Column Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          
+
           {/* Left Column: Story & Interests */}
           <div className="lg:col-span-7 space-y-10">
             <div className="space-y-6">
@@ -44,8 +44,8 @@ export default function About() {
                 {interests.map((item) => {
                   const Icon = item.icon
                   return (
-                    <div 
-                      key={item.name} 
+                    <div
+                      key={item.name}
                       className="p-5 border border-cream-300 dark:border-maroon-900/50 rounded-xl bg-cream-100 dark:bg-maroon-950 hover:border-maroon-500 dark:hover:border-maroon-700 transition-all duration-205 shadow-soft-sm group"
                     >
                       <div className="flex items-center gap-3 mb-2">
@@ -76,12 +76,12 @@ export default function About() {
           {/* Right Column: Minimal Profile Card */}
           <div className="lg:col-span-5 lg:sticky lg:top-24 w-full max-w-md mx-auto lg:max-w-none">
             <div className="bg-cream-100 dark:bg-maroon-950 border border-cream-300 dark:border-maroon-900/80 rounded-2xl p-6 shadow-soft space-y-6 transition-colors duration-300">
-              
+
               {/* Profile Image Frame */}
               <div className="aspect-square w-full relative rounded-xl overflow-hidden bg-cream-50 dark:bg-maroon-900 border border-cream-300/40 dark:border-maroon-900/40">
-                <img 
-                  src="/profile_avatar.png" 
-                  alt="Profile Avatar" 
+                <img
+                  src="/profile_avatar.png"
+                  alt="Profile Avatar"
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   loading="lazy"
                 />
@@ -107,7 +107,7 @@ export default function About() {
                   </div>
                   <div className="flex items-center gap-3">
                     <BookOpen className="w-4 h-4 text-maroon-500 dark:text-cream-400 flex-shrink-0" />
-                    <span>Learning React, Node.js & UI Architecture</span>
+                    <span>Learning DSA, AI & DATA SCIENCE</span>
                   </div>
                 </div>
               </div>
