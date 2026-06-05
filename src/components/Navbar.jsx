@@ -118,16 +118,19 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className={`text-sm font-medium transition-all duration-200 relative py-1 ${
+                className={`text-sm font-medium transition-all duration-200 py-1 flex items-center ${
                   isLinkActive 
                     ? 'text-maroon-950 dark:text-cream-50 font-bold' 
                     : 'text-cream-700 dark:text-cream-400 hover:text-maroon-700 dark:hover:text-cream-200'
                 }`}
               >
-                {link.name}
-                {isLinkActive && (
-                  <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-maroon-700 dark:bg-maroon-500 rounded-full" />
-                )}
+                <span className="text-maroon-500 mr-1.5 font-sans font-semibold">/</span>
+                <span className="relative">
+                  {link.name}
+                  {isLinkActive && (
+                    <span className="absolute bottom-0 left-0 w-full h-[1.5px] bg-maroon-700 dark:bg-maroon-500 rounded-full" />
+                  )}
+                </span>
               </a>
             )
           })}
@@ -135,21 +138,21 @@ export default function Navbar() {
           {/* Theme Toggle Button */}
           <button
             onClick={toggleDarkMode}
-            className="p-2 rounded-lg bg-cream-200 dark:bg-maroon-900/60 border border-cream-300 dark:border-maroon-900/70 text-maroon-700 dark:text-cream-300 hover:text-maroon-950 dark:hover:text-cream-50 transition-colors duration-200"
+            className="w-10 h-10 rounded-full border border-cream-300 dark:border-maroon-800 text-maroon-700 dark:text-cream-300 hover:text-maroon-950 dark:hover:text-cream-100 hover:border-maroon-500 dark:hover:border-maroon-500 flex items-center justify-center transition-all duration-200 focus:outline-none bg-transparent"
             aria-label="Toggle theme"
           >
-            {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
           </button>
         </div>
 
         {/* Mobile Menu Trigger & Theme Toggle */}
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-3 md:hidden">
           <button
             onClick={toggleDarkMode}
-            className="p-2 rounded-lg bg-cream-200 dark:bg-maroon-900/60 border border-cream-300 dark:border-maroon-900/70 text-maroon-700 dark:text-cream-300 hover:text-maroon-950 dark:hover:text-cream-50 transition-colors duration-200"
+            className="w-10 h-10 rounded-full border border-cream-300 dark:border-maroon-800 text-maroon-700 dark:text-cream-300 hover:text-maroon-950 dark:hover:text-cream-100 hover:border-maroon-500 dark:hover:border-maroon-500 flex items-center justify-center transition-all duration-200 focus:outline-none bg-transparent"
             aria-label="Toggle theme"
           >
-            {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            {darkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
           </button>
 
           <button
@@ -176,13 +179,14 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className={`text-base font-medium py-2 border-b border-cream-200 dark:border-maroon-900/50 last:border-0 transition-colors ${
+                className={`text-base font-medium py-2 border-b border-cream-200 dark:border-maroon-900/50 last:border-0 transition-colors flex items-center ${
                   isLinkActive 
                     ? 'text-maroon-950 dark:text-cream-50 font-bold pl-3 border-l-2 border-l-maroon-700 dark:border-l-maroon-500' 
                     : 'text-cream-700 dark:text-cream-400 hover:text-maroon-700 dark:hover:text-cream-250 pl-1'
                 }`}
               >
-                {link.name}
+                <span className="text-maroon-500 mr-2 font-semibold">/</span>
+                <span>{link.name}</span>
               </a>
             )
           })}
